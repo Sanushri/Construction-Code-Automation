@@ -93,7 +93,7 @@ if uploaded_file is not None:
     #prediction_data.to_excel(output_file, index=False)
 
     # Save the updated DataFrame to a BytesIO object
-    output = io.BytesIO()
+    output = BytesIO()
     prediction_data.to_excel(output, index=False, engine='openpyxl')
     output.seek(0)  # Move the cursor to the beginning of the BytesIO object
 
