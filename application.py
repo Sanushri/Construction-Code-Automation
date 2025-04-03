@@ -18,7 +18,7 @@ uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
 if uploaded_file is not None:
     # Load the data from the uploaded Excel file
     prediction_data = pd.read_excel(uploaded_file,engine='openpyxl')
-    url=r'https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FSanushri%2FConstruction-Code-Automation%2Frefs%2Fheads%2Fmain%2FBm_construction_codesv2.xlsx&wdOrigin=BROWSELINK'
+    url=r'https://raw.githubusercontent.com/Sanushri/Construction-Code-Automation/main/Bm_construction_codesv2.xlsx'
     # Load the data from the Excel file "C:\Users\u1323736\OneDrive - MMC\Documents\PDCS -BM\Costruction Code Automation Project\Bm_construction_codesv2.xlsx"
     #file_path = r'C:\Users\u1323736\OneDrive - MMC\Documents\PDCS -BM\Costruction Code Automation Project\Bm_construction_codesv2.xlsx'
     # Replace with your file path
