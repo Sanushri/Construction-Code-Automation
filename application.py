@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import streamlit as st 
-#import io
+import io
 
 
 # Streamlit app
@@ -93,16 +93,16 @@ if uploaded_file is not None:
     #prediction_data.to_excel(output_file, index=False)
 
     # Save the updated DataFrame to a BytesIO object
-    #output = io.BytesIO()
-    pred=prediction_data.to_excel(output_file, index=False)
-    #output.seek(0)  # Move the cursor to the beginning of the BytesIO object
+    output = io.BytesIO()
+    prediction_data.to_excel(output, index=False, engine='openpyxl')
+    output.seek(0)  # Move the cursor to the beginning of the BytesIO object
 
     print(prediction_data)
 
     # Provide a download link
     st.download_button(
             label="Download Updated Excel File",
-            data=pred,
+            data=output,
             file_name="predictions.xlsx",
             mime="application/vnd.ms-excel"
             #mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
