@@ -89,12 +89,12 @@ if uploaded_file is not None:
     prediction_data.head(2)
 
     # Save the updated DataFrame to a new Excel file
-    #output_file = "output_with_predictions.xlsx"
+    output_file = "predictions.xlsx"
     #prediction_data.to_excel(output_file, index=False)
 
     # Save the updated DataFrame to a BytesIO object
     #output = io.BytesIO()
-    pred=prediction_data.to_excel(output, index=False)
+    pred=prediction_data.to_excel(output_file, index=False)
     #output.seek(0)  # Move the cursor to the beginning of the BytesIO object
 
     print(prediction_data)
