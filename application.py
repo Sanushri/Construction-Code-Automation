@@ -17,12 +17,12 @@ uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
 
 if uploaded_file is not None:
     # Load the data from the uploaded Excel file
-    prediction_data = pd.read_excel(uploaded_file)
+    prediction_data = pd.read_excel(uploaded_file,engine='openpyxl')
     url=r'https://github.com/Sanushri/Construction-Code-Automation/blob/main/Bm_construction_codesv2.xlsx'
     # Load the data from the Excel file "C:\Users\u1323736\OneDrive - MMC\Documents\PDCS -BM\Costruction Code Automation Project\Bm_construction_codesv2.xlsx"
     #file_path = r'C:\Users\u1323736\OneDrive - MMC\Documents\PDCS -BM\Costruction Code Automation Project\Bm_construction_codesv2.xlsx'
     # Replace with your file path
-    data1 = pd.read_excel(url)
+    data1 = pd.read_excel(url,engine='openpyxl')
 
     # Display the first few rows of the data
     print(data1.tail())
